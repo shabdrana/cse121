@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Luminary Academy — Where Minds Ignite</title>
   <style>
-    /* =========================================
-       CSS CUSTOM PROPERTIES (VARIABLES)
-    ========================================= */
     :root {
       --blue-dark:   #0a1628;
       --blue-mid:    #0d2d6b;
@@ -33,9 +30,7 @@
       --font-body:    'Segoe UI', system-ui, sans-serif;
     }
 
-    /* =========================================
-       RESET & BASE
-    ========================================= */
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body {
@@ -49,9 +44,6 @@
     img { max-width: 100%; display: block; }
     button { cursor: pointer; font-family: inherit; border: none; background: none; }
 
-    /* =========================================
-       UTILITY
-    ========================================= */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -84,9 +76,6 @@
       margin-top: 12px;
     }
 
-    /* =========================================
-       NAVBAR
-    ========================================= */
     #navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -107,7 +96,6 @@
       box-shadow: var(--shadow-md);
     }
 
-    /* Logo */
     .nav-logo {
       display: flex;
       align-items: center;
@@ -172,7 +160,7 @@
       transform: translateY(-1px);
     }
 
-    /* Hamburger */
+   
     .hamburger {
       display: none;
       flex-direction: column;
@@ -193,7 +181,6 @@
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* Mobile menu */
     .mobile-menu {
       display: none;
       position: fixed;
@@ -222,9 +209,6 @@
     }
     .mobile-menu a:hover { background: rgba(255,255,255,0.08); color: var(--white); }
 
-    /* =========================================
-       HERO SECTION
-    ========================================= */
     #home {
       min-height: 100vh;
       position: relative;
@@ -234,7 +218,6 @@
       background: var(--blue-dark);
     }
 
-    /* Animated background */
     .hero-bg {
       position: absolute; inset: 0;
       background:
@@ -242,7 +225,6 @@
         radial-gradient(ellipse 60% 80% at 80% 60%, rgba(245,158,11,0.12) 0%, transparent 55%),
         radial-gradient(ellipse 100% 100% at 50% 0%, rgba(13,45,107,0.9) 0%, var(--blue-dark) 70%);
     }
-    /* Floating grid pattern */
     .hero-grid {
       position: absolute; inset: 0;
       background-image:
@@ -255,7 +237,6 @@
       from { transform: translateY(0); }
       to   { transform: translateY(50px); }
     }
-    /* Floating orbs */
     .orb {
       position: absolute;
       border-radius: 50%;
@@ -365,7 +346,6 @@
       transform: translateY(-2px);
     }
 
-    /* Hero stats bar */
     .hero-stats {
       display: flex;
       gap: 0;
@@ -404,9 +384,6 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* =========================================
-       ABOUT SECTION
-    ========================================= */
     #about {
       padding: 110px 0;
       background: var(--white);
@@ -421,7 +398,6 @@
     .about-visual {
       position: relative;
     }
-    /* Decorative visual block */
     .about-card-stack {
       position: relative;
       height: 420px;
@@ -506,9 +482,6 @@
     .feat-text strong { display: block; font-size: 0.9rem; color: var(--blue-dark); margin-bottom: 2px; }
     .feat-text span { font-size: 0.8rem; color: var(--text-muted); }
 
-    /* =========================================
-       COURSES SECTION
-    ========================================= */
     #courses {
       padding: 110px 0;
       background: var(--off-white);
@@ -631,9 +604,6 @@
       transform: translateY(-1px);
     }
 
-    /* =========================================
-       COUNTERS SECTION
-    ========================================= */
     #counters {
       padding: 80px 0;
       background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
@@ -678,10 +648,6 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
-
-    /* =========================================
-       CONTACT SECTION
-    ========================================= */
     #contact {
       padding: 110px 0;
       background: var(--white);
@@ -840,9 +806,6 @@
     }
     .form-success p { color: var(--text-muted); }
 
-    /* =========================================
-       FOOTER
-    ========================================= */
     footer {
       background: var(--blue-dark);
       padding: 70px 0 28px;
@@ -914,9 +877,6 @@
     .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.45); transition: color var(--transition); }
     .footer-links a:hover { color: var(--white); }
 
-    /* =========================================
-       WELCOME POPUP
-    ========================================= */
     .popup-overlay {
       position: fixed; inset: 0;
       background: rgba(0,0,0,0.6);
@@ -982,9 +942,7 @@
       box-shadow: 0 10px 30px rgba(26,86,219,0.5);
     }
 
-    /* =========================================
-       SCROLL TO TOP
-    ========================================= */
+
     #scrollTop {
       position: fixed;
       bottom: 28px; right: 28px;
@@ -1004,9 +962,6 @@
     #scrollTop.show { opacity: 1; pointer-events: all; transform: translateY(0); }
     #scrollTop:hover { box-shadow: 0 10px 28px rgba(26,86,219,0.6); transform: translateY(-3px); }
 
-    /* =========================================
-       RESPONSIVE
-    ========================================= */
     @media (max-width: 1024px) {
       .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .about-visual { max-width: 500px; }
@@ -1041,9 +996,6 @@
 
 <body>
 
-  <!-- ==========================================
-       WELCOME POPUP (shows on page load)
-  =========================================== -->
   <div class="popup-overlay" id="popup" role="dialog" aria-modal="true" aria-label="Welcome popup">
     <div class="popup-box">
       <button class="popup-close" id="popupClose" aria-label="Close popup">✕</button>
@@ -1057,9 +1009,6 @@
     </div>
   </div>
 
-  <!-- ==========================================
-       NAVBAR
-  =========================================== -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <a href="#home" class="nav-logo" aria-label="Luminary Academy home">
       <div class="logo-icon" aria-hidden="true">🏛</div>
@@ -1069,7 +1018,6 @@
       </div>
     </a>
 
-    <!-- Desktop links -->
     <ul class="nav-links" role="list">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -1077,23 +1025,17 @@
       <li><a href="#contact" class="nav-cta">Contact Us</a></li>
     </ul>
 
-    <!-- Hamburger (mobile) -->
     <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- Mobile dropdown menu -->
   <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
     <a href="#home" class="mobile-link">🏠 Home</a>
     <a href="#about" class="mobile-link">ℹ️ About</a>
     <a href="#courses" class="mobile-link">📚 Courses</a>
     <a href="#contact" class="mobile-link">✉️ Contact</a>
   </div>
-
-  <!-- ==========================================
-       HERO SECTION
-  =========================================== -->
   <section id="home" aria-label="Hero section">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
@@ -1124,7 +1066,6 @@
         </a>
       </div>
 
-      <!-- Stats bar -->
       <div class="hero-stats" role="list" aria-label="School statistics">
         <div class="hero-stat" role="listitem">
           <div class="num" data-target="15000">0</div>
@@ -1146,14 +1087,10 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       ABOUT SECTION
-  =========================================== -->
   <section id="about" aria-labelledby="about-heading">
     <div class="container">
       <div class="about-grid">
 
-        <!-- Visual side -->
         <div class="about-visual">
           <div class="about-card-stack">
             <div class="about-card-main">
@@ -1173,7 +1110,6 @@
           </div>
         </div>
 
-        <!-- Text side -->
         <div class="about-text">
           <span class="section-label">About Us</span>
           <h2 class="section-title" id="about-heading">
@@ -1227,9 +1163,6 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       COURSES SECTION
-  =========================================== -->
   <section id="courses" aria-labelledby="courses-heading">
     <div class="container">
       <div class="courses-header">
@@ -1245,7 +1178,6 @@
 
       <div class="courses-grid" role="list" aria-label="Available courses">
 
-        <!-- Card 1 -->
         <article class="course-card" role="listitem">
           <div class="course-card-top">
             <span class="course-emoji" aria-hidden="true">💻</span>
@@ -1266,7 +1198,6 @@
           </div>
         </article>
 
-        <!-- Card 2 -->
         <article class="course-card" role="listitem">
           <div class="course-card-top">
             <span class="course-emoji" aria-hidden="true">🧬</span>
@@ -1287,7 +1218,6 @@
           </div>
         </article>
 
-        <!-- Card 3 -->
         <article class="course-card" role="listitem">
           <div class="course-card-top">
             <span class="course-emoji" aria-hidden="true">📐</span>
@@ -1308,7 +1238,6 @@
           </div>
         </article>
 
-        <!-- Card 4 -->
         <article class="course-card" role="listitem">
           <div class="course-card-top">
             <span class="course-emoji" aria-hidden="true">🎨</span>
@@ -1329,7 +1258,6 @@
           </div>
         </article>
 
-        <!-- Card 5 -->
         <article class="course-card" role="listitem">
           <div class="course-card-top">
             <span class="course-emoji" aria-hidden="true">🌍</span>
@@ -1350,7 +1278,6 @@
           </div>
         </article>
 
-        <!-- Card 6 -->
         <article class="course-card" role="listitem">
           <div class="course-card-top">
             <span class="course-emoji" aria-hidden="true">💼</span>
@@ -1375,9 +1302,6 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       ANIMATED COUNTERS SECTION
-  =========================================== -->
   <section id="counters" aria-label="School statistics">
     <div class="container">
       <div class="counters-grid" role="list" aria-label="Achievement numbers">
@@ -1413,9 +1337,6 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       CONTACT SECTION
-  =========================================== -->
   <section id="contact" aria-labelledby="contact-heading">
     <div class="container">
       <div style="text-align:center;margin-bottom:56px;">
@@ -1431,7 +1352,6 @@
 
       <div class="contact-grid">
 
-        <!-- Contact info -->
         <div class="contact-info">
           <h3>Let's Connect</h3>
           <p>
@@ -1470,9 +1390,7 @@
           </div>
         </div>
 
-        <!-- Contact form -->
         <div class="contact-form">
-          <!-- Success message (hidden by default) -->
           <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
             <div class="success-icon" aria-hidden="true">✓</div>
             <h3>Message Sent!</h3>
@@ -1480,12 +1398,10 @@
                Our admissions team will get back to you within 24 hours.</p>
           </div>
 
-          <!-- The actual form -->
           <form id="contactForm" novalidate>
             <p class="form-title">Send Us a Message</p>
 
             <div class="form-row">
-              <!-- Name -->
               <div class="form-group">
                 <label for="name">Full Name *</label>
                 <input 
@@ -1499,7 +1415,6 @@
                 <span class="field-error" id="nameError" role="alert">Please enter your full name.</span>
               </div>
 
-              <!-- Email -->
               <div class="form-group">
                 <label for="email">Email Address *</label>
                 <input 
@@ -1514,7 +1429,6 @@
               </div>
             </div>
 
-            <!-- Subject -->
             <div class="form-group">
               <label for="subject">Subject</label>
               <input 
@@ -1525,7 +1439,6 @@
               />
             </div>
 
-            <!-- Message -->
             <div class="form-group">
               <label for="message">Message *</label>
               <textarea 
@@ -1547,13 +1460,10 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       FOOTER
-  =========================================== -->
   <footer role="contentinfo">
     <div class="container">
       <div class="footer-grid">
-        <!-- Brand -->
+
         <div class="footer-brand">
           <div class="nav-logo" style="margin-bottom:0;">
             <div class="logo-icon" aria-hidden="true">🏛</div>
@@ -1574,7 +1484,6 @@
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul role="list">
@@ -1585,7 +1494,6 @@
           </ul>
         </div>
 
-        <!-- Programs -->
         <div class="footer-col">
           <h4>Programs</h4>
           <ul role="list">
@@ -1596,7 +1504,6 @@
           </ul>
         </div>
 
-        <!-- Contact -->
         <div class="footer-col">
           <h4>Contact</h4>
           <ul role="list">
@@ -1619,21 +1526,14 @@
     </div>
   </footer>
 
-  <!-- Scroll-to-top button -->
   <button id="scrollTop" aria-label="Scroll to top of page">↑</button>
 
-  <!-- ==========================================
-       JAVASCRIPT
-  =========================================== -->
   <script>
-    /* =============================================
-       1. NAVBAR: scroll detection & active links
-    ============================================= */
+  
     const navbar = document.getElementById('navbar');
     const navLinks = document.querySelectorAll('.nav-links a');
     const sections = document.querySelectorAll('section[id]');
 
-    // Add "scrolled" class to navbar when user scrolls down
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -1641,7 +1541,6 @@
         navbar.classList.remove('scrolled');
       }
 
-      // Highlight active nav link based on scroll position
       let current = '';
       sections.forEach(sec => {
         const top = sec.offsetTop - 90;
@@ -1655,9 +1554,6 @@
       });
     });
 
-    /* =============================================
-       2. HAMBURGER MENU TOGGLE (mobile)
-    ============================================= */
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -1667,7 +1563,6 @@
       hamburger.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close mobile menu when any link inside it is clicked
     document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
@@ -1676,18 +1571,13 @@
       });
     });
 
-    /* =============================================
-       3. CONTACT FORM VALIDATION
-    ============================================= */
     const form = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
 
-    // Helper: validate an email address with a simple regex
     function isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
     }
 
-    // Helper: show/clear error message for a field
     function setError(inputId, errorId, show) {
       const input = document.getElementById(inputId);
       const error = document.getElementById(errorId);
@@ -1700,7 +1590,6 @@
       }
     }
 
-    // Clear error on user input
     ['name','email','message'].forEach(id => {
       document.getElementById(id).addEventListener('input', () => {
         document.getElementById(id).classList.remove('error');
@@ -1709,7 +1598,7 @@
     });
 
     form.addEventListener('submit', (e) => {
-      e.preventDefault(); // Prevent page reload
+      e.preventDefault(); 
 
       const nameVal    = document.getElementById('name').value.trim();
       const emailVal   = document.getElementById('email').value.trim();
@@ -1717,7 +1606,6 @@
 
       let hasError = false;
 
-      // Validate: name must not be empty
       if (!nameVal) {
         setError('name', 'nameError', true);
         hasError = true;
@@ -1725,7 +1613,6 @@
         setError('name', 'nameError', false);
       }
 
-      // Validate: email must not be empty AND must be valid format
       if (!emailVal || !isValidEmail(emailVal)) {
         setError('email', 'emailError', true);
         hasError = true;
@@ -1733,7 +1620,6 @@
         setError('email', 'emailError', false);
       }
 
-      // Validate: message must not be empty
       if (!messageVal) {
         setError('message', 'messageError', true);
         hasError = true;
@@ -1741,13 +1627,11 @@
         setError('message', 'messageError', false);
       }
 
-      // If no errors, show success state
       if (!hasError) {
         const submitBtn = document.getElementById('submitBtn');
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending…';
 
-        // Simulate a brief "sending" delay then show success
         setTimeout(() => {
           form.style.display = 'none';
           formSuccess.classList.add('show');
@@ -1755,16 +1639,12 @@
       }
     });
 
-    /* =============================================
-       4. ANIMATED COUNTERS
-    ============================================= */
-    // Animate a number from 0 to its target over ~2 seconds
     function animateCounter(el, target, duration = 2000) {
       const start = performance.now();
       const update = (now) => {
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
-        // Ease-out quad
+
         const eased = 1 - (1 - progress) * (1 - progress);
         el.textContent = Math.floor(eased * target).toLocaleString();
         if (progress < 1) requestAnimationFrame(update);
@@ -1773,7 +1653,6 @@
       requestAnimationFrame(update);
     }
 
-    // Use IntersectionObserver so counters only run when visible
     const counterSection = document.getElementById('counters');
     let countersRun = false;
 
@@ -1791,9 +1670,6 @@
 
     counterObserver.observe(counterSection);
 
-    /* =============================================
-       5. SCROLL-TO-TOP BUTTON
-    ============================================= */
     const scrollTopBtn = document.getElementById('scrollTop');
 
     window.addEventListener('scroll', () => {
@@ -1808,14 +1684,10 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    /* =============================================
-       6. WELCOME POPUP
-    ============================================= */
     const popup        = document.getElementById('popup');
     const popupClose   = document.getElementById('popupClose');
     const popupOk      = document.getElementById('popupOk');
 
-    // Show popup after 1.2 s so the page loads first
     setTimeout(() => {
       popup.classList.add('show');
     }, 1200);
@@ -1826,26 +1698,19 @@
 
     popupClose.addEventListener('click', closePopup);
 
-    // "Explore" button scrolls to courses and closes popup
     popupOk.addEventListener('click', () => {
       closePopup();
       document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
     });
 
-    // Close popup when clicking outside the box
     popup.addEventListener('click', (e) => {
       if (e.target === popup) closePopup();
     });
 
-    // Close popup with Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closePopup();
     });
 
-    /* =============================================
-       7. SMOOTH SCROLL for anchor links
-       (covers any <a href="#..."> not handled above)
-    ============================================= */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const target = document.querySelector(this.getAttribute('href'));
